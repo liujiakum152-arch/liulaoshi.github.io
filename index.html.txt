@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谷歌账号商城 - 国内长效稳定</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc05 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        header { 
+            text-align: center; 
+            padding: 40px 20px; 
+            color: white;
+        }
+        h1 { font-size: 2.2em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .subtitle { font-size: 1.1em; opacity: 0.95; }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #856404;
+        }
+        
+        .product-card { 
+            background: white; 
+            border-radius: 16px; 
+            padding: 30px; 
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .product-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4285f4, #ea4335);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8em;
+            margin-right: 15px;
+        }
+        
+        .product-title { font-size: 1.5em; color: #333; }
+        .product-desc { 
+            color: #666; 
+            line-height: 1.8; 
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        
+        .features {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .features li {
+            list-style: none;
+            padding: 5px 0;
+            color: #555;
+        }
+        .features li:before {
+            content: "✓ ";
+            color: #34a853;
+            font-weight: bold;
+        }
+        
+        .price-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+        .price {
+            color: #ea4335;
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+        .price span {
+            font-size: 0.5em;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+        
+        .buy-btn { 
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        .buy-btn:hover { transform: scale(1.05); }
+        
+        .notice {
+            background: #e8f5e9;
+            border-left: 4px solid #34a853;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #2e7d32;
+        }
+        
+        footer { 
+            text-align: center; 
+            color: white; 
+            margin-top: 40px; 
+            padding: 20px;
+            opacity: 0.9;
+        }
+        .contact { 
+            background: rgba(255,255,255,0.15); 
+            padding: 15px; 
+            border-radius: 10px; 
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 谷歌账号商城</h1>
+            <p class="subtitle">国内长效稳定 | 即买即用 | 自动发货</p>
+        </header>
+        
+        <div class="warning">
+            <strong>⚠️ 购买须知：</strong>本账号仅供学习、科研、外贸等合法用途使用，禁止用于违法违规活动。账号为共享性质，请勿绑定重要个人资产。
+        </div>
+        
+        <div class="product-card">
+            <div class="product-header">
+                <div class="icon">G</div>
+                <div>
+                    <div class="product-title">国内共享长效谷歌账号</div>
+                    <div style="color: #888; font-size: 0.9em;">已稳定运营 500+ 天</div>
+                </div>
+            </div>
+            
+            <p class="product-desc">
+                解决国内无法注册谷歌账号的难题，无需翻墙即可购买。账号已通过验证，可直接登录使用，支持 Gmail、Google Drive、YouTube 等全部服务。
+            </p>
+            
+            <div class="features">
+                <li>✅ 国内网络直接登录，无需额外工具</li>
+                <li>✅ 已通过手机号验证，非批量注册号</li>
+                <li>✅ 长效稳定，非临时一次性号</li>
+                <li>✅ 支持修改密码，可绑定辅助邮箱</li>
+                <li>✅ 7天内登录问题包换</li>
+            </div>
+            
+            <div class="notice">
+                <strong>🚀 自动发货：</strong>付款后系统自动显示账号密码，无需等待人工发送
+            </div>
+            
+            <div class="price-box">
+                <div class="price">¥15 <span>¥30</span></div>
+                <!-- 这里先留空，等面包多创建后填入链接 -->
+                <a href="#" class="buy-btn" onclick="alert('请先点击下方客服微信获取购买链接');return false;">立即购买</a>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="contact">
+                <p><strong>购买流程：</strong>点击购买 → 微信支付 → 自动显示账号密码</p>
+                <p>客服微信：<strong>liulaoshi2024</strong>（备注：谷歌账号）</p>
+                <p>工作时间：9:00-22:00 | 自动发货24小时可用</p>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.85em;">© 2024 谷歌账号商城 | 仅供学习交流使用</p>
+        </footer>
+    </div>
+</body>
+</html>
