@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即购买 - 谷歌账号</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 500px; margin: 0 auto; }
+        
+        .header { 
+            text-align: center; 
+            color: white; 
+            padding: 30px 20px;
+        }
+        h1 { font-size: 1.8em; margin-bottom: 10px; }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .price {
+            text-align: center;
+            font-size: 3em;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .price span {
+            font-size: 0.4em;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        
+        /* 步骤1：扫码支付 */
+        .step1 { display: block; }
+        .qr-box {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .qr-box img {
+            width: 250px;
+            height: 250px;
+            border-radius: 8px;
+        }
+        .qr-box p {
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .pay-btn {
+            width: 100%;
+            padding: 15px;
+            background: #07c160;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        /* 步骤2：显示卡密 */
+        .step2 { display: none; }
+        .step2.active { display: block; }
+        
+        .success-icon {
+            text-align: center;
+            font-size: 4em;
+            color: #07c160;
+            margin-bottom: 20px;
+        }
+        
+        .account-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .account-box h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .account-info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+        .account-info label {
+            display: block;
+            color: #666;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+            font-family: sans-serif;
+        }
+        .copy-btn {
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        
+        .notice {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            color: #856404;
+            font-size: 0.9em;
+        }
+        
+        /* 假验证输入 */
+        .verify-box {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+        .verify-box input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            text-align: center;
+            letter-spacing: 8px;
+        }
+        .verify-box button {
+            width: 100%;
+            padding: 12px;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            padding: 20px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 谷歌账号购买</h1>
+            <p>自动发货 · 即买即用</p>
+        </div>
+        
+        <div class="card">
+            <div class="price">
+                ¥15 <span>¥30</span>
+            </div>
+            
+            <!-- 步骤1：扫码支付 -->
+            <div class="step1" id="step1">
+                <p style="text-align: center; color: #666; margin-bottom: 15px;">
+                    请使用微信扫描下方二维码付款
+                </p>
+                
+                <div class="qr-box">
+                    <!-- 这里放你的微信收款码 -->
+                    <img src="wechat-pay.jpg" alt="微信收款码">
+                    <p>扫码支付 ¥15</p>
+                </div>
+                
+                <div class="verify-box">
+                    <p style="margin-bottom: 10px; color: #666; font-size: 0.9em;">
+                        付款完成后，输入微信<strong>支付凭证号后4位</strong>验证：
+                    </p>
+                    <input type="text" id="verifyCode" placeholder="例如：6688" maxlength="4">
+                    <button onclick="verifyPayment()">验证并获取账号</button>
+                </div>
+                
+                <p style="text-align: center; color: #999; font-size: 0.8em; margin-top: 15px;">
+                    支付凭证号在微信账单详情中查看
+                </p>
+            </div>
+            
+            <!-- 步骤2：显示卡密（自动发货） -->
+            <div class="step2" id="step2">
+                <div class="success-icon">✓</div>
+                <h2 style="text-align: center; color: #07c160; margin-bottom: 20px;">
+                    支付验证成功
+                </h2>
+                
+                <div class="account-box">
+                    <h3>您的谷歌账号信息：</h3>
+                    
+                    <div class="account-info">
+                        <label>账号（邮箱）</label>
+                        <span id="account">google001@gmail.com</span>
+                        <button class="copy-btn" onclick="copyText('account')">复制</button>
+                    </div>
+                    
+                    <div class="account-info">
+                        <label>密码</label>
+                        <span id="password">Pass123456</span>
+                        <button class="copy-btn" onclick="copyText('password')">复制</button>
+                    </div>
+                </div>
+                
+                <div class="notice">
+                    <strong>⚠️ 重要提示：</strong><br>
+                    1. 请立即登录并修改密码<br>
+                    2. 建议绑定辅助邮箱<br>
+                    3. 7天内登录问题可联系客服更换
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>客服微信：lcslcs1202</p>
+            <p>© 2024 谷歌账号商城</p>
+        </footer>
+    </div>
+    
+    <script>
+        // 卡密库存（实际应用中应从服务器获取）
+        const inventory = [
+            { account: 'liujiakun568@gmail.com', password: 'lcs123...' },
+            { account: 'liujiakun710@gmail.com', password: 'lcs123...' },
+            { account: 'liujiakun985@gmail.com', password: 'lcs123...' }
+        ];
+        
+        let currentIndex = 0;
+        
+        function verifyPayment() {
+            const code = document.getElementById('verifyCode').value;
+            
+            // 简单验证：必须是4位数字（实际可对接微信支付API）
+            if (code.length === 4 && /^\d{4}$/.test(code)) {
+                // 显示卡密
+                document.getElementById('step1').style.display = 'none';
+                document.getElementById('step2').classList.add('active');
+                
+                // 分配账号（轮询库存）
+                if (currentIndex < inventory.length) {
+                    document.getElementById('account').textContent = inventory[currentIndex].account;
+                    document.getElementById('password').textContent = inventory[currentIndex].password;
+                    currentIndex++;
+                } else {
+                    alert('库存不足，请联系客服');
+                }
+            } else {
+                alert('请输入4位支付凭证号');
+            }
+        }
+        
+        function copyText(id) {
+            const text = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('已复制到剪贴板');
+            });
+        }
+    </script>
+</body>
+</html>
